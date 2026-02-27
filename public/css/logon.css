@@ -1,41 +1,104 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     margin: 0;
     padding: 0;
+    min-height: 100vh;
 }
 
 .container {
-    max-width: 400px;
-    margin: 5% auto;
-    padding: 20px;
+    max-width: 500px;
+    margin: 2% auto;
+    padding: 30px;
     background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 h1 {
     text-align: center;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.app-description {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 0.95em;
+    line-height: 1.4;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+h3 {
+    color: #555;
+    margin: 20px 0 15px 0;
+    font-size: 1.1em;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 8px;
+}
+
+.form-description {
+    text-align: center;
+    color: #666;
     margin-bottom: 20px;
+    font-size: 0.9em;
+}
+
+.form-section {
+    margin-bottom: 25px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
 }
 
 .tab {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .tab-button {
     flex: 1;
-    padding: 10px 0;
+    padding: 12px 0;
     border: none;
     cursor: pointer;
-    background-color: #ddd;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    color: #666;
 }
 
 .tab-button.active {
-    background-color: #4caf50;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
+    transform: translateY(-2px);
+}
+
+.tab-button:hover:not(.active) {
+    background-color: #e0e0e0;
+    color: #333;
 }
 
 form {
@@ -44,45 +107,114 @@ form {
 
 form.active-form {
     display: block;
+    animation: fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 label {
     display: block;
-    margin: 10px 0 5px;
+    margin: 15px 0 8px;
+    color: #555;
+    font-weight: 500;
 }
 
-input {
+input, select {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+select {
+    cursor: pointer;
+    background-color: white;
 }
 
 .button {
     width: 100%;
-    padding: 10px;
-    background-color: #4caf50;
+    padding: 15px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 10px;
 }
 
 .button:hover {
-    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.button:active {
+    transform: translateY(0);
+}
+
+.link-button {
+    background: none;
+    border: none;
+    color: #667eea;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.link-button:hover {
+    color: #764ba2;
+}
+
+.forgot-password, .back-to-login {
+    text-align: center;
+    margin-top: 15px;
 }
 
 .message {
-    margin-top: 10px;
+    margin-top: 15px;
+    padding: 12px;
     text-align: center;
     font-size: 14px;
+    border-radius: 8px;
+    font-weight: 500;
 }
 
-.success {
-    color: green;
+.message.success {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
 }
 
-.error {
-    color: red;
+.message.error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .container {
+        margin: 5% 20px;
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
 }

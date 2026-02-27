@@ -3,20 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Fashionistas - Dashboard</title>
     <link rel="stylesheet" href="/css/dashboard.css">
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Users</h1>
-            <div>
-                <button id="refreshButton">Refresh List</button>
-                <button id="logoutButton">Log Out</button>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <div class="logo-section">
+                <h1>Fashionistas</h1>
+                <p>Your Style Journey Starts Here</p>
             </div>
-        </div>
-        <div class="user-list" id="userList"></div>
+            <div class="user-actions">
+                <span id="userWelcome" class="welcome-text"></span>
+                <button id="refreshButton" class="action-btn">Refresh</button>
+                <button id="logoutButton" class="logout-btn">Log Out</button>
+            </div>
+        </header>
+
+        <main class="dashboard-main">
+            <div class="dashboard-grid">
+                <!-- Style Profile Card -->
+                <div class="dashboard-card">
+                    <h2>📝 Your Style Profile</h2>
+                    <div id="userProfile" class="profile-content">
+                        <p>Loading your profile...</p>
+                    </div>
+                    <button class="card-button">Edit Profile</button>
+                </div>
+
+                <!-- Digital Closet Card -->
+                <div class="dashboard-card">
+                    <h2>👗 Digital Closet</h2>
+                    <div class="closet-preview">
+                        <div class="closet-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">0</span>
+                                <span class="stat-label">Tops</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">0</span>
+                                <span class="stat-label">Bottoms</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">0</span>
+                                <span class="stat-label">Dresses</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">0</span>
+                                <span class="stat-label">Shoes</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="card-button" onclick="window.location.href='/closet.html'">Add Items</button>
+                </div>
+
+                <!-- Outfit Planning Card -->
+                <div class="dashboard-card">
+                    <h2>📅 This Week's Outfits</h2>
+                    <div class="outfit-calendar">
+                        <div class="calendar-day">
+                            <span class="day-label">Mon</span>
+                            <div class="outfit-slot">+</div>
+                        </div>
+                        <div class="calendar-day">
+                            <span class="day-label">Tue</span>
+                            <div class="outfit-slot">+</div>
+                        </div>
+                        <div class="calendar-day">
+                            <span class="day-label">Wed</span>
+                            <div class="outfit-slot">+</div>
+                        </div>
+                        <div class="calendar-day">
+                            <span class="day-label">Thu</span>
+                            <div class="outfit-slot">+</div>
+                        </div>
+                        <div class="calendar-day">
+                            <span class="day-label">Fri</span>
+                            <div class="outfit-slot">+</div>
+                        </div>
+                    </div>
+                    <button class="card-button" onclick="window.location.href='/outfits.html'">Plan Outfits</button>
+                </div>
+
+                <!-- Style Inspiration Card -->
+                <div class="dashboard-card">
+                    <h2>✨ Style Inspiration</h2>
+                    <div class="inspiration-grid">
+                        <div class="inspiration-item">Coming Soon</div>
+                        <div class="inspiration-item">Coming Soon</div>
+                        <div class="inspiration-item">Coming Soon</div>
+                    </div>
+                    <button class="card-button" onclick="window.location.href='/inspiration.html'">Explore Styles</button>
+                </div>
+
+                <!-- Community Card -->
+                <div class="dashboard-card">
+                    <h2>👥 Fashion Community</h2>
+                    <div id="userList" class="community-list">
+                        <p>Loading community members...</p>
+                    </div>
+                    <button class="card-button" onclick="window.location.href='/community.html'">Join Discussions</button>
+                </div>
+
+                <!-- Shopping Suggestions Card -->
+                <div class="dashboard-card">
+                    <h2>🛍️ Shopping Suggestions</h2>
+                    <div class="shopping-suggestions">
+                        <p>Based on your style profile, we'll suggest items to complete your looks!</p>
+                    </div>
+                    <button class="card-button" onclick="window.location.href='/shopping.html'">Browse Suggestions</button>
+                </div>
+            </div>
+        </main>
     </div>
+    
     <script src="/js/dashboard.js"></script>
     <script src="/js/datamodel.js"></script>
 </body>

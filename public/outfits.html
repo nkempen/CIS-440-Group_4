@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outfit Planner - Fashionitas</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <div class="logo-section">
+                <h1>Outfit Planner</h1>
+                <p>Plan your looks for the week ahead</p>
+            </div>
+            <div class="user-actions">
+                <button class="action-btn" onclick="window.location.href='/dashboard'">← Dashboard</button>
+                <button id="logoutButton" class="logout-btn">Log Out</button>
+            </div>
+        </header>
+
+        <main class="dashboard-main">
+            <div class="dashboard-grid">
+                <!-- Weekly Calendar -->
+                <div class="dashboard-card full-width">
+                    <h2>📅 This Week's Outfits</h2>
+                    <div class="weekly-calendar">
+                        <div class="calendar-day">
+                            <h3>Monday</h3>
+                            <div class="outfit-preview">
+                                <div class="outfit-slot large">+</div>
+                                <p>Add outfit</p>
+                            </div>
+                        </div>
+                        <div class="calendar-day">
+                            <h3>Tuesday</h3>
+                            <div class="outfit-preview">
+                                <div class="outfit-slot large">+</div>
+                                <p>Add outfit</p>
+                            </div>
+                        </div>
+                        <div class="calendar-day">
+                            <h3>Wednesday</h3>
+                            <div class="outfit-preview">
+                                <div class="outfit-slot large">+</div>
+                                <p>Add outfit</p>
+                            </div>
+                        </div>
+                        <div class="calendar-day">
+                            <h3>Thursday</h3>
+                            <div class="outfit-preview">
+                                <div class="outfit-slot large">+</div>
+                                <p>Add outfit</p>
+                            </div>
+                        </div>
+                        <div class="calendar-day">
+                            <h3>Friday</h3>
+                            <div class="outfit-preview">
+                                <div class="outfit-slot large">+</div>
+                                <p>Add outfit</p>
+                            </div>
+                        </div>
+                        <div class="calendar-day">
+                            <h3>Saturday</h3>
+                            <div class="outfit-preview">
+                                <div class="outfit-slot large">+</div>
+                                <p>Add outfit</p>
+                            </div>
+                        </div>
+                        <div class="calendar-day">
+                            <h3>Sunday</h3>
+                            <div class="outfit-preview">
+                                <div class="outfit-slot large">+</div>
+                                <p>Add outfit</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Outfit Builder -->
+                <div class="dashboard-card">
+                    <h2>🎨 Outfit Builder</h2>
+                    <div class="outfit-builder">
+                        <div class="build-area">
+                            <div class="drop-zone" data-type="top">
+                                <p>Drop a top here</p>
+                            </div>
+                            <div class="drop-zone" data-type="bottom">
+                                <p>Drop bottoms here</p>
+                            </div>
+                            <div class="drop-zone" data-type="shoes">
+                                <p>Drop shoes here</p>
+                            </div>
+                        </div>
+                        <button class="card-button">Save Outfit</button>
+                    </div>
+                </div>
+
+                <!-- Saved Outfits -->
+                <div class="dashboard-card">
+                    <h2>💾 Saved Outfits</h2>
+                    <div id="savedOutfits" class="outfits-grid">
+                        <p>No saved outfits yet. Create your first look!</p>
+                    </div>
+                </div>
+
+                <!-- Weather & Suggestions -->
+                <div class="dashboard-card">
+                    <h2>🌤️ Weather & Suggestions</h2>
+                    <div class="weather-section">
+                        <div class="weather-info">
+                            <p>Today's weather will help suggest appropriate outfits</p>
+                        </div>
+                        <div class="suggestions">
+                            <h3>Suggested for today:</h3>
+                            <ul>
+                                <li>Light layers - temperature varying</li>
+                                <li>Comfortable shoes for walking</li>
+                                <li>Bring a light jacket</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="/js/auth-check.js"></script>
+    <script src="/js/outfits.js"></script>
+</body>
+</html>

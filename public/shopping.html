@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Suggestions - Fashionitas</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <div class="logo-section">
+                <h1>Shopping Suggestions</h1>
+                <p>Smart recommendations for your style</p>
+            </div>
+            <div class="user-actions">
+                <button class="action-btn" onclick="window.location.href='/dashboard'">← Dashboard</button>
+                <button id="logoutButton" class="logout-btn">Log Out</button>
+            </div>
+        </header>
+
+        <main class="dashboard-main">
+            <div class="dashboard-grid">
+                <!-- Personalized Picks -->
+                <div class="dashboard-card">
+                    <h2>🎯 Just For You</h2>
+                    <div class="personalized-picks">
+                        <p>Based on your style profile and wardrobe gaps</p>
+                        <div class="recommendation-item">
+                            <div class="rec-image placeholder">Item Image</div>
+                            <div class="rec-info">
+                                <h4>Classic White Button-Down</h4>
+                                <p>Perfect for your minimalist style</p>
+                                <span class="price">$45 - $89</span>
+                            </div>
+                        </div>
+                        <div class="recommendation-item">
+                            <div class="rec-image placeholder">Item Image</div>
+                            <div class="rec-info">
+                                <h4>Tailored Black Trousers</h4>
+                                <p>Complete your work wardrobe</p>
+                                <span class="price">$65 - $120</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Complete the Look -->
+                <div class="dashboard-card">
+                    <h2>✨ Complete the Look</h2>
+                    <div class="complete-look-section">
+                        <div class="current-outfit">
+                            <h3>You have:</h3>
+                            <div class="outfit-items">
+                                <div class="outfit-item">Blue Jeans</div>
+                                <div class="outfit-item">White Sneakers</div>
+                            </div>
+                        </div>
+                        <div class="suggestions">
+                            <h3>We suggest adding:</h3>
+                            <div class="suggestion-items">
+                                <div class="suggestion-item">
+                                    <div class="sugg-image placeholder">Item</div>
+                                    <p>Striped Top</p>
+                                </div>
+                                <div class="suggestion-item">
+                                    <div class="sugg-image placeholder">Item</div>
+                                    <p>Denim Jacket</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trending Now -->
+                <div class="dashboard-card">
+                    <h2>🔥 Trending Now</h2>
+                    <div class="trending-items">
+                        <div class="trend-category">
+                            <h3>Spring Essentials</h3>
+                            <div class="trend-grid">
+                                <div class="trend-item">
+                                    <div class="trend-image placeholder">Trend 1</div>
+                                    <p>Pastel Blazers</p>
+                                </div>
+                                <div class="trend-item">
+                                    <div class="trend-image placeholder">Trend 2</div>
+                                    <p>Wide-leg Pants</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wishlist -->
+                <div class="dashboard-card">
+                    <h2>💖 Your Wishlist</h2>
+                    <div id="wishlist" class="wishlist-items">
+                        <p>Items you've saved will appear here</p>
+                    </div>
+                    <button class="card-button">Browse More Items</button>
+                </div>
+
+                <!-- Budget Tracker -->
+                <div class="dashboard-card">
+                    <h2>💰 Style Budget</h2>
+                    <div class="budget-section">
+                        <div class="budget-stats">
+                            <div class="budget-item">
+                                <span class="budget-label">Monthly Budget</span>
+                                <span class="budget-amount">$200</span>
+                            </div>
+                            <div class="budget-item">
+                                <span class="budget-label">Spent This Month</span>
+                                <span class="budget-amount spent">$75</span>
+                            </div>
+                            <div class="budget-item">
+                                <span class="budget-label">Remaining</span>
+                                <span class="budget-amount remaining">$125</span>
+                            </div>
+                        </div>
+                        <div class="budget-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 37.5%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="card-button">Set Budget Goals</button>
+                </div>
+
+                <!-- Partner Stores -->
+                <div class="dashboard-card">
+                    <h2>🏪 Partner Stores</h2>
+                    <div class="partner-stores">
+                        <div class="store-item">
+                            <div class="store-logo placeholder">Store 1</div>
+                            <p>Fashion Forward</p>
+                            <span class="discount">20% off</span>
+                        </div>
+                        <div class="store-item">
+                            <div class="store-logo placeholder">Store 2</div>
+                            <p>Style Essentials</p>
+                            <span class="discount">15% off</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="/js/auth-check.js"></script>
+    <script src="/js/shopping.js"></script>
+</body>
+</html>

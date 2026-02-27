@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Inspiration - Fashionitas</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <div class="logo-section">
+                <h1>Style Inspiration</h1>
+                <p>Discover your personal style aesthetic</p>
+            </div>
+            <div class="user-actions">
+                <button class="action-btn" onclick="window.location.href='/dashboard'">← Dashboard</button>
+                <button id="logoutButton" class="logout-btn">Log Out</button>
+            </div>
+        </header>
+
+        <main class="dashboard-main">
+            <div class="dashboard-grid">
+                <!-- Personal Style Profile -->
+                <div class="dashboard-card">
+                    <h2>✨ Your Style Profile</h2>
+                    <div id="styleProfile" class="style-profile">
+                        <div class="style-keywords">
+                            <h3>Your Style Keywords</h3>
+                            <div class="keyword-tags">
+                                <span class="style-tag primary">Minimalist</span>
+                                <span class="style-tag">Chic</span>
+                                <span class="style-tag">Modern</span>
+                            </div>
+                        </div>
+                        <div class="color-palette">
+                            <h3>Your Color Palette</h3>
+                            <div class="palette-colors">
+                                <div class="color-swatch" style="background-color: #2c3e50;"></div>
+                                <div class="color-swatch" style="background-color: #ecf0f1;"></div>
+                                <div class="color-swatch" style="background-color: #e74c3c;"></div>
+                                <div class="color-swatch" style="background-color: #f39c12;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="card-button">Update Style Profile</button>
+                </div>
+
+                <!-- Style Gallery -->
+                <div class="dashboard-card full-width">
+                    <h2>🖼️ Inspiration Gallery</h2>
+                    <div class="style-filters">
+                        <button class="filter-btn active" data-filter="all">All Styles</button>
+                        <button class="filter-btn" data-filter="casual">Casual</button>
+                        <button class="filter-btn" data-filter="formal">Formal</button>
+                        <button class="filter-btn" data-filter="trendy">Trendy</button>
+                        <button class="filter-btn" data-filter="classic">Classic</button>
+                    </div>
+                    <div class="inspiration-gallery">
+                        <div class="inspiration-card" data-style="casual">
+                            <div class="inspiration-image placeholder">Casual Look</div>
+                            <p>Effortless Weekend Style</p>
+                        </div>
+                        <div class="inspiration-card" data-style="formal">
+                            <div class="inspiration-image placeholder">Formal Look</div>
+                            <p>Professional Power Dressing</p>
+                        </div>
+                        <div class="inspiration-card" data-style="trendy">
+                            <div class="inspiration-image placeholder">Trendy Look</div>
+                            <p>Current Fashion Forward</p>
+                        </div>
+                        <div class="inspiration-card" data-style="classic">
+                            <div class="inspiration-image placeholder">Classic Look</div>
+                            <p>Timeless Elegance</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Style Mood Board -->
+                <div class="dashboard-card">
+                    <h2>📌 My Mood Board</h2>
+                    <div class="mood-board">
+                        <div class="mood-item">Style inspiration saved here</div>
+                        <div class="mood-item">Color combinations</div>
+                        <div class="mood-item">Outfit ideas</div>
+                    </div>
+                    <button class="card-button">Create New Board</button>
+                </div>
+
+                <!-- Style Quiz -->
+                <div class="dashboard-card">
+                    <h2>🎯 Style Assessment</h2>
+                    <div class="quiz-section">
+                        <p>Take our style quiz to refine your personal aesthetic and get better recommendations.</p>
+                        <div class="quiz-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 60%;"></div>
+                            </div>
+                            <p>60% Complete</p>
+                        </div>
+                    </div>
+                    <button class="card-button">Continue Quiz</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="/js/auth-check.js"></script>
+    <script src="/js/inspiration.js"></script>
+</body>
+</html>

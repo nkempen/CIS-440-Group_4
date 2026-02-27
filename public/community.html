@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Community - Fashionitas</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <div class="logo-section">
+                <h1>Fashion Community</h1>
+                <p>Connect, share, and get feedback</p>
+            </div>
+            <div class="user-actions">
+                <button class="action-btn" onclick="window.location.href='/dashboard'">← Dashboard</button>
+                <button id="logoutButton" class="logout-btn">Log Out</button>
+            </div>
+        </header>
+
+        <main class="dashboard-main">
+            <div class="dashboard-grid">
+                <!-- Post an Outfit -->
+                <div class="dashboard-card">
+                    <h2>📸 Share Your Look</h2>
+                    <div class="post-section">
+                        <div class="post-form">
+                            <textarea placeholder="What's your style story today?" rows="3"></textarea>
+                            <div class="post-options">
+                                <label class="privacy-option">
+                                    <input type="radio" name="privacy" value="public" checked>
+                                    Public
+                                </label>
+                                <label class="privacy-option">
+                                    <input type="radio" name="privacy" value="private">
+                                    Private
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="card-button">Share Outfit</button>
+                </div>
+
+                <!-- Community Feed -->
+                <div class="dashboard-card full-width">
+                    <h2>🌟 Community Feed</h2>
+                    <div id="communityFeed" class="feed-container">
+                        <div class="feed-post">
+                            <div class="post-header">
+                                <div class="user-avatar">J</div>
+                                <div class="post-user-info">
+                                    <h4>jane.style</h4>
+                                    <p>2 hours ago</p>
+                                </div>
+                            </div>
+                            <div class="post-content">
+                                <div class="post-image placeholder">Outfit Image</div>
+                                <p>Perfect casual Friday look! Loving these new sneakers ✨</p>
+                            </div>
+                            <div class="post-actions">
+                                <button class="reaction-btn">👍 12</button>
+                                <button class="reaction-btn">💬 3</button>
+                                <button class="reaction-btn">📌 Save</button>
+                            </div>
+                        </div>
+                        
+                        <div class="feed-post">
+                            <div class="post-header">
+                                <div class="user-avatar">A</div>
+                                <div class="post-user-info">
+                                    <h4>alex.fashion</h4>
+                                    <p>4 hours ago</p>
+                                </div>
+                            </div>
+                            <div class="post-content">
+                                <div class="post-image placeholder">Outfit Image</div>
+                                <p>Date night ready! What do you think of this color combo?</p>
+                            </div>
+                            <div class="post-actions">
+                                <button class="reaction-btn">👍 8</button>
+                                <button class="reaction-btn">💬 5</button>
+                                <button class="reaction-btn">📌 Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Following & Followers -->
+                <div class="dashboard-card">
+                    <h2>👥 Your Network</h2>
+                    <div class="network-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">24</span>
+                            <span class="stat-label">Following</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">18</span>
+                            <span class="stat-label">Followers</span>
+                        </div>
+                    </div>
+                    <div class="suggested-follows">
+                        <h3>Suggested to Follow</h3>
+                        <div class="user-suggestions">
+                            <div class="suggestion-item">
+                                <div class="user-avatar">S</div>
+                                <div class="user-info">
+                                    <p>sarah.chic</p>
+                                    <span>Minimalist style</span>
+                                </div>
+                                <button class="follow-btn">Follow</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Style Challenges -->
+                <div class="dashboard-card">
+                    <h2>🏆 Style Challenges</h2>
+                    <div class="challenges-list">
+                        <div class="challenge-item">
+                            <h3>Monochrome Monday</h3>
+                            <p>Create a look using only one color family</p>
+                            <span class="participants">156 participants</span>
+                        </div>
+                        <div class="challenge-item active">
+                            <h3>Thrift Find Friday</h3>
+                            <p>Style a thrifted piece in a new way</p>
+                            <span class="participants">89 participants</span>
+                        </div>
+                    </div>
+                    <button class="card-button">Join Challenge</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="/js/auth-check.js"></script>
+    <script src="/js/community.js"></script>
+</body>
+</html>

@@ -69,5 +69,37 @@ const DataModel = (function () {
 
         //ADD MORE FUNCTIONS HERE TO FETCH DATA FROM THE SERVER
         //AND SEND DATA TO THE SERVER AS NEEDED
+        
+        //function to fetch the current user's profile information
+        getUserProfile: async function () {
+            // Check if the token is set
+            if (!token) {
+                console.error("Token is not set.");
+                return {};
+            }
+
+            try {
+                // this is our call to get the user's profile data
+                const response = await fetch('/api/user-profile', {
+                    method: 'GET',
+                    headers: {
+                        // we need to send the token in the headers
+                        'Authorization': token,
+                        'Content-Type': 'application/json',
+                    },
+                });
+
+                if (!response.ok) {
+                    console.error("Error fetching user profile:", await response.json());
+                    return {};
+                }
+
+                const data = await response.json();
+                return data.profile || {};
+            } catch (error) {
+                console.error("Error in getUserProfile:", error);
+                return {};
+            }
+        },
     };
 })();

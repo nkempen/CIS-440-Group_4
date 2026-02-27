@@ -10,33 +10,118 @@
 
 <body>
     <div class="container">
-        <h1>Welcome to Node App</h1>
+        <h1>Welcome to Fashionitas</h1>
+        <p class="app-description">Your personal fashion companion for style inspiration, outfit planning, and organization.</p>
+        
         <div class="tab">
-            <button class="tab-button active" id="login-tab">Logon</button>
-            <button class="tab-button" id="create-account-tab">Create Account</button>
+            <button class="tab-button active" id="login-tab">Login</button>
+            <button class="tab-button" id="create-account-tab">Sign Up</button>
         </div>
 
         <div id="form-container">
-            <!-- Logon Form -->
+            <!-- Login Form -->
             <form id="logon-form" class="active-form">
+                <h2>Welcome Back!</h2>
                 <label for="login-email">Email:</label>
                 <input type="email" id="login-email" placeholder="Enter your email" required>
 
                 <label for="login-password">Password:</label>
                 <input type="password" id="login-password" placeholder="Enter your password" required>
 
-                <button type="submit" class="button">Logon</button>
+                <button type="submit" class="button">Login</button>
+                
+                <div class="forgot-password">
+                    <button type="button" id="forgot-password-btn" class="link-button">Forgot Password?</button>
+                </div>
             </form>
 
             <!-- Create Account Form -->
             <form id="create-account-form">
-                <label for="create-email">Email:</label>
-                <input type="email" id="create-email" placeholder="Enter your email" required>
+                <h2>Join Fashionitas</h2>
+                <p class="form-description">Tell us about yourself to get personalized style recommendations</p>
+                
+                <!-- Basic Info -->
+                <div class="form-section">
+                    <h3>Account Information</h3>
+                    <label for="create-email">Email:</label>
+                    <input type="email" id="create-email" placeholder="Enter your email" required>
 
-                <label for="create-password">Password:</label>
-                <input type="password" id="create-password" placeholder="Create your password" required>
+                    <label for="create-password">Password:</label>
+                    <input type="password" id="create-password" placeholder="Create a strong password" required>
+                </div>
+
+                <!-- Profile Questions -->
+                <div class="form-section">
+                    <h3>Style Profile</h3>
+                    
+                    <label for="age">Age:</label>
+                    <select id="age" required>
+                        <option value="">Select your age range</option>
+                        <option value="16-20">16-20</option>
+                        <option value="21-25">21-25</option>
+                        <option value="26-30">26-30</option>
+                        <option value="31-35">31-35</option>
+                        <option value="36-40">36-40</option>
+                        <option value="41-45">41-45</option>
+                        <option value="46-50">46-50</option>
+                        <option value="51+">51+</option>
+                    </select>
+
+                    <label for="gender">Gender:</label>
+                    <select id="gender" required>
+                        <option value="">Select gender</option>
+                        <option value="Woman">Woman</option>
+                        <option value="Man">Man</option>
+                        <option value="Non-binary">Non-binary</option>
+                        <option value="Prefer not to say">Prefer not to say</option>
+                    </select>
+
+                    <label for="hair-color">Hair Color:</label>
+                    <select id="hair-color">
+                        <option value="">Select hair color (optional)</option>
+                        <option value="Black">Black</option>
+                        <option value="Brown">Brown</option>
+                        <option value="Blonde">Blonde</option>
+                        <option value="Red">Red</option>
+                        <option value="Auburn">Auburn</option>
+                        <option value="Gray">Gray</option>
+                        <option value="White">White</option>
+                        <option value="Other/Dyed">Other/Dyed</option>
+                    </select>
+
+                    <label for="skin-tone">Skin Tone:</label>
+                    <select id="skin-tone">
+                        <option value="">Select skin tone (optional)</option>
+                        <option value="Very Fair">Very Fair</option>
+                        <option value="Fair">Fair</option>
+                        <option value="Light">Light</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Olive">Olive</option>
+                        <option value="Tan">Tan</option>
+                        <option value="Dark">Dark</option>
+                        <option value="Deep">Deep</option>
+                    </select>
+
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" placeholder="City, State (optional)">
+                </div>
 
                 <button type="submit" class="button">Create Account</button>
+            </form>
+
+            <!-- Password Reset Form -->
+            <form id="reset-password-form" style="display: none;">
+                <h2>Reset Password</h2>
+                <p class="form-description">Enter your email to receive a password reset link</p>
+                
+                <label for="reset-email">Email:</label>
+                <input type="email" id="reset-email" placeholder="Enter your email" required>
+                
+                <button type="submit" class="button">Send Reset Link</button>
+                
+                <div class="back-to-login">
+                    <button type="button" id="back-to-login-btn" class="link-button">← Back to Login</button>
+                </div>
             </form>
 
             <p id="message" class="message"></p>

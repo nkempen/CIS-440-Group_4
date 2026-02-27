@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Closet - Fashionitas</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <div class="logo-section">
+                <h1>Digital Closet</h1>
+                <p>Organize and manage your wardrobe</p>
+            </div>
+            <div class="user-actions">
+                <button class="action-btn" onclick="window.location.href='/dashboard'">← Dashboard</button>
+                <button id="logoutButton" class="logout-btn">Log Out</button>
+            </div>
+        </header>
+
+        <main class="dashboard-main">
+            <div class="dashboard-grid">
+                <!-- Upload Section -->
+                <div class="dashboard-card">
+                    <h2>📸 Add New Items</h2>
+                    <div class="upload-section">
+                        <div class="upload-area">
+                            <p>Drag & drop images here or click to upload</p>
+                            <input type="file" id="imageUpload" accept="image/*" multiple style="display: none;">
+                            <button class="card-button" onclick="document.getElementById('imageUpload').click()">Choose Images</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categories -->
+                <div class="dashboard-card">
+                    <h2>👔 Categories</h2>
+                    <div class="category-grid">
+                        <div class="category-item" data-category="tops">
+                            <h3>Tops</h3>
+                            <span class="item-count">0 items</span>
+                        </div>
+                        <div class="category-item" data-category="bottoms">
+                            <h3>Bottoms</h3>
+                            <span class="item-count">0 items</span>
+                        </div>
+                        <div class="category-item" data-category="dresses">
+                            <h3>Dresses</h3>
+                            <span class="item-count">0 items</span>
+                        </div>
+                        <div class="category-item" data-category="shoes">
+                            <h3>Shoes</h3>
+                            <span class="item-count">0 items</span>
+                        </div>
+                        <div class="category-item" data-category="accessories">
+                            <h3>Accessories</h3>
+                            <span class="item-count">0 items</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Items -->
+                <div class="dashboard-card">
+                    <h2>🆕 Recently Added</h2>
+                    <div id="recentItems" class="items-grid">
+                        <p>No items yet. Start by uploading your first piece!</p>
+                    </div>
+                </div>
+
+                <!-- Tags & Organization -->
+                <div class="dashboard-card">
+                    <h2>🏷️ Tags & Organization</h2>
+                    <div class="tag-section">
+                        <h3>Popular Tags</h3>
+                        <div class="tag-cloud">
+                            <span class="tag">casual</span>
+                            <span class="tag">formal</span>
+                            <span class="tag">summer</span>
+                            <span class="tag">winter</span>
+                            <span class="tag">work</span>
+                            <span class="tag">party</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="/js/auth-check.js"></script>
+    <script src="/js/closet.js"></script>
+</body>
+</html>
